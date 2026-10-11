@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For my betu ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+  --cream: #f8f3eb;
+  --paper: #fffdf8;
+  --brown: #6e5848;
+  --rose: #bd827c;
+  --tan: #e8d9c6;
+  --ink: #483b32;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+button, input { font: inherit; }
+
+button { -webkit-tap-highlight-color: transparent; }
+
+.hero {
+  min-height: 100svh;
+  padding: 35px 20px 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 10% 10%, #eadcc7 0, transparent 40%),
+    radial-gradient(ellipse at 90% 90%, #eed8d1 0, transparent 40%),
+    var(--cream);
+  position: relative;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(45px, 11vw, 77px);
+  line-height: 1.1;
+  font-weight: 500;
+  margin: 22px 0 12px;
+}
+
+.italic {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.hero p {
+  max-width: 320px;
+  line-height: 1.9;
+  font-size: 14px;
+  color: #79675a;
+}
+
+.stamp {
+  width: 135px;
+  height: 135px;
+  margin: 25px auto;
+  border: 1px solid #bda18c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 58px;
+  transform: rotate(-8deg);
+  background: #fffaf2;
+  box-shadow: 5px 6px 0 #e6d7c4;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-7px) rotate(-5deg); }
+}
+
+.btn {
+  background: var(--ink);
+  color: #fffaf2;
+  border: 1px solid var(--ink);
+  padding: 14px 25px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .2s;
+  margin: 8px 4px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.btn:hover { background: var(--rose); border-color: var(--rose); }
+
+.btn-light {
+  background: transparent;
+  color: var(--ink);
+  border-color: #c8b4a0;
+}
+
+section { padding: 75px 20px; }
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 7vw, 43px);
+  font-weight: 500;
+  margin: 0 0 22px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.95;
+}
+
+.letter {
+  max-width: 510px;
+  margin: 25px auto;
+  padding: 35px 27px;
+  text-align: left;
+  background: var(--paper);
+  border: 1px solid #e6d9c9;
+  box-shadow: 5px 6px 0 #e9ddcf;
+  position: relative;
+}
+
+.letter:before {
+  content: "♡";
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  color: var(--rose);
+  font-size: 22px;
+}
+
+.letter p { font-size: 14px; }
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 24px;
+  color: var(--rose);
+  text-align: right;
+  margin-top: 28px;
+}
+
+.reasons {
+  background: #eee4d7;
+}
+
+.grid {
+  max-width: 700px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.reason {
+  background: #fffaf3;
+  border: 1px solid #e5d5c4;
+  padding: 23px 12px;
+  min-height: 145px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+
+.reason span { font-size: 27px; }
+
+.reason p {
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.reason b { font-size: 13px; }
+
+.gallery-intro {
+  max-width: 340px;
+  margin: 0 auto 22px;
+  color: #806f60;
+}
+
+.gallery {
+  max-width: 700px;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.photo-card {
+  padding: 9px 9px 15px;
+  background: var(--paper);
+  box-shadow: 0 4px 14px #6d513315;
+  transform: rotate(-2deg);
+}
+
+.photo-card:nth-child(even) { transform: rotate(2deg); }
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #eee3d5;
+}
+
+.photo-card p {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  margin: 12px 0 0;
+}
+
+.upload {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px dashed #b79b83;
+  padding: 15px 18px;
+  margin: 12px 0;
+  font-size: 12px;
+  line-height: 1.8;
+  background: #fffaf3;
+}
+
+.upload input { display: none; }
+
+#photoStatus {
+  font-size: 11px;
+  color: #806f60;
+}
+
+.playful {
+  background: #e9ddd0;
+}
+
+.joke-card {
+  background: #fffaf3;
+  max-width: 480px;
+  padding: 32px 22px;
+  margin: 25px auto;
+  border: 1px solid #e2d1be;
+}
+
+.joke-card .big { font-size: 45px; }
+
+#jokeText, #letterReveal, #finalReveal {
+  display: none;
+  margin-top: 20px;
+  animation: show .5s ease;
+}
+
+@keyframes show {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.secret-section {
+  background: #f5eee5;
+}
+
+.envelope {
+  font-size: 75px;
+  margin: 20px;
+  cursor: pointer;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+.reveal-card {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 28px 22px;
+  background: var(--paper);
+  border: 1px solid #dfcbb7;
+}
+
+.reveal-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 29px;
+  font-weight: 500;
+  color: var(--rose);
+}
+
+footer {
+  padding: 38px 20px;
+  background: #e7d8c8;
+}
+
+footer p { font-size: 11px; }
+
+.float-heart {
+  position: fixed;
+  z-index: 99;
+  pointer-events: none;
+  bottom: -30px;
+  animation: rise 4s linear forwards;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(35deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 370px) {
+  .grid { gap: 9px; }
+  .reason { padding: 16px 8px; }
+  .letter { padding: 30px 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<header class="hero">
+  <div class="eyebrow">A little something for someone special</div>
+
+  <div class="stamp">🎂</div>
+
+  <div class="eyebrow">October • Your special day</div>
+
+  <h1>Happy Birthday,<br><span class="italic">Baby ♡</span></h1>
+
+  <p>
+    A tiny corner of the internet, made just for you.
+    Because an ordinary birthday wish wasn't enough.
+  </p>
+
+  <button class="btn" onclick="openGift()">
+    OPEN YOUR LITTLE GIFT ↗
+  </button>
+
+  <p style="font-size:11px">made with love, by your girl ♡</p>
+</header>
+
+<!-- LETTER -->
+<section id="letterSection">
+  <div class="section-label">01 — A little letter</div>
+  <h2>To my favourite <span class="italic">boy.</span></h2>
+
+  <div class="letter">
+    <p>Dear Baby, ♡</p>
+
+    <p>
+      Happy Birthday to the boy who has a very special
+      place in my heart. I wish I could wrap all the
+      happiness in the world into one little gift and
+      give it to you today.
+    </p>
+
+    <p>
+      I hope this new chapter brings you success,
+      peaceful days, big opportunities, silly laughs,
+      and all the things you've secretly been wishing for.
+    </p>
+
+    <p>
+      And just so you know, I'm really proud of you.
+      Even on the days when you doubt yourself,
+      I hope you remember how much potential you have.
+      Keep chasing your dreams, okay?
+    </p>
+
+    <p>
+      Thank you for being with me baby. For the little moments,
+      the random conversations, the laughs, and all
+      the memories still waiting for us to make.
+    </p>
+
+    <p>
+      I can't promise every day will be perfect,
+      but I hope I can keep adding a little happiness
+      to your days, just as you add to mine.
+    </p>
+
+    <p> 
+      I know sometimes me silly behave karte ani tras pn dete tula 
+      but te tula tras denya sathi nasty , mala awadty jeva tu mala manavtos 
+      jeva premana boltos ani lahan baby sarkha treat kartos .
+      but anyways tula tras tr mi detch rahnar ahe ! hehehe ^_^ ,
+      ani lifetime tula mala sahan karat rahava lagel 
+      I love you so much baby ! 
+      and thank you for every thing , tu mala mazya life madhe sagla kahi dilay ,
+      asach always mazya sobat raha ani khush raha .
+      thik ahe ata tuzya sathi mi thoda sa change hoil no problem ,
+      and mi always tumchya sobat ahe , khai pn zala tri mi sobat ahe , okay baby  ?
+      bass zala ata khup babad kele na ^_^ 
+    
+    </p>
+    <p>Today is your day,once again happiest birthday my betu <3 . Enjoy every second!</p>
+
+    <div class="signature">Love, your girl ♡</div>
+  </div>
+</section>
+
+<!-- REASONS -->
+<section class="reasons">
+  <div class="section-label">02 — Little things</div>
+  <h2>Reasons I adore <span class="italic">you.</span></h2>
+
+  <p>It's the little things that make someone special.</p>
+
+  <div class="grid">
+    <div class="reason">
+      <span>☁️</span>
+      <b>Your presence</b>
+      <p>You make ordinary moments feel a little more special.</p>
+    </div>
+
+    <div class="reason">
+      <span>🤎</span>
+      <b>Your heart</b>
+      <p>The person you are matters more than you know.</p>
+    </div>
+
+    <div class="reason">
+      <span>🧸</span>
+      <b>Your silly side</b>
+      <p>Because life needs more laughter and fewer boring days.</p>
+    </div>
+
+    <div class="reason">
+      <span>✨</span>
+      <b>Simply you</b>
+      <p>No special reason needed. Being yourself is enough.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FUNNY PART -->
+<section class="playful">
+  <div class="section-label">04 — Important announcement</div>
+  <h2>Birthday boy <span class="italic">duties.</span></h2>
+
+  <div class="joke-card">
+    <div class="big">📜</div>
+
+    <p>By order of your girl, you are officially required to:</p>
+
+    <p>♡ Eat something delicious.</p>
+    <p>♡ Smile at least 100 times today.</p>
+    <p>♡ Love your babdu more today .</p>
+    <p>♡ Remember that you're getting older. 🤭</p>
+
+    <button class="btn" onclick="showJoke()">ONE LAST RULE →</button>
+
+    <div id="jokeText">
+      <h2 style="font-size:27px">You must tolerate me. 😭</h2>
+      <p>
+        Birthday privilege expires at midnight.
+        Terms and conditions: I'm always right.
+        (Okay, maybe not always.) 😂🤎
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SECRET -->
+<section class="secret-section">
+  <div class="section-label">05 — Just for you</div>
+  <h2>One last little <span class="italic">surprise.</span></h2>
+
+  <p>There's something I wanted to tell you privately.</p>
+
+  <div class="envelope" onclick="revealLetter()" role="button" tabindex="0"
+       onkeydown="if(event.key==='Enter'||event.key===' ')revealLetter()"
+       aria-label="Open your secret letter">💌</div>
+
+  <p style="font-size:11px">TAP THE LETTER TO OPEN IT ♡</p>
+
+  <div id="letterReveal" class="reveal-card">
+    <div style="font-size:38px">🤎</div>
+    <h3>Between you and me...</h3>
+
+    <p>
+      You're more than just part of my life , you are my life baby 
+      You're someone I genuinely wish beautiful things
+      for, someone who really matters to me.
+    </p>
+
+    <p>
+      I hope you grow into every dream you've ever had.
+      I hope life surprises you in the best ways.
+      I hope you will get everything u want in your life ,
+      and i know you will get it,
+      I am always here for you in every situation ! .
+      And I hope, when you look back on this year,
+      you have so many reasons to smile.
+    </p>
+
+    <p>
+      Thank you for being part of my life ,
+      Here's to your next chapter, Baby. ♡
+    </p>
+
+    <h3>Happy Birthday, my betu . 🎂</h3>
+
+    <p>With all my love,</p>
+    <div class="signature" style="text-align:center">Your girl ♡</div>
+
+    <button class="btn" onclick="finalSurprise()">ONE MORE THING...</button>
+
+    <div id="finalReveal">
+      <div style="font-size:55px">🎉🤎🎀</div>
+      <h3>YOU ARE ONLY MINE </h3>
+      <p>Never forget that, okay? Happy Birthday, Baby!</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div style="font-size:25px">♡</div>
+  <p>Made with love, just for Baby.</p>
+  <p>Forever a little piece of my heart. 🤎</p>
+  <p style="opacity:.65">— Your girl, with love.</p>
+</footer>
+
+<script>
+function openGift() {
+  document.getElementById('letterSection').scrollIntoView({
+    behavior: 'smooth'
+  });
+  hearts(15);
+}
+
+function showJoke() {
+  document.getElementById('jokeText').style.display = 'block';
+  hearts(8);
+}
+
+function revealLetter() {
+  const letter = document.getElementById('letterReveal');
+  letter.style.display = 'block';
+  hearts(20);
+
+  setTimeout(() => {
+    letter.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }, 100);
+}
+
+function finalSurprise() {
+  document.getElementById('finalReveal').style.display = 'block';
+  hearts(30);
+}
+
+function hearts(count) {
+  const emojis = ['♡', '🤎', '✨', '🎀', '💕', '🌷'];
+
+  for (let i = 0; i < count; i++) {
+    setTimeout(() => {
+      const heart = document.createElement('span');
+      heart.className = 'float-heart';
+      heart.textContent = emojis[
+        Math.floor(Math.random() * emojis.length)
+      ];
+
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (18 + Math.random() * 18) + 'px';
+      heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5500);
+    }, i * 100);
+  }
+}
+
+</script>
+
+</body>
+</html>
